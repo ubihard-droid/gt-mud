@@ -1,0 +1,10 @@
+# Bases SQLite temporales que generan el demo y el benchmark
+*.db
+mud_demo.db
+bench.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
