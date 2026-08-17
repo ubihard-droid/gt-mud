@@ -73,6 +73,8 @@ Endpoints: `POST /query` · `POST /write` · `POST /resolve` · `GET /audit` · 
 
 ## Benchmark: ¿ahorra atención de verdad?
 
+![Benchmark MUD: 99.7% menos tokens, precisión 20% a 80%, recall 100%](assets/benchmark.svg)
+
 [`bench.py`](bench.py) siembra **150 bloques** de memoria y hace **12 preguntas**,
 cada una con un único bloque correcto (solo stdlib, reproducible con semilla fija).
 

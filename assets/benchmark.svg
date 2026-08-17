@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" font-family="'Segoe UI',system-ui,sans-serif">
+  <!-- card -->
+  <rect x="0" y="0" width="820" height="470" rx="16" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="819" height="469" rx="16" fill="none" stroke="#30363d"/>
+
+  <!-- title -->
+  <text x="32" y="48" fill="#e6edf3" font-size="24" font-weight="700">MUD — costo de atención por consulta</text>
+  <text x="32" y="74" fill="#8b949e" font-size="14">150 bloques de memoria · 12 consultas · presupuesto 400 tokens · datos de demo</text>
+
+  <!-- axis note -->
+  <text x="32" y="118" fill="#8b949e" font-size="13">Tokens de contexto que recibe el agente (menos es mejor)</text>
+
+  <!-- Bar 1: FLAT -->
+  <text x="32" y="162" fill="#e6edf3" font-size="15" font-weight="600">Mandar TODO</text>
+  <rect x="200" y="142" width="560" height="30" rx="6" fill="#f85149"/>
+  <text x="748" y="162" fill="#0d1117" font-size="15" font-weight="700" text-anchor="end">8 722 tokens</text>
+
+  <!-- Bar 2: MUD sin rerank -->
+  <text x="32" y="212" fill="#e6edf3" font-size="15" font-weight="600">MUD</text>
+  <rect x="200" y="192" width="9" height="30" rx="4" fill="#d29922"/>
+  <text x="222" y="212" fill="#d29922" font-size="15" font-weight="700">110 tokens</text>
+
+  <!-- Bar 3: MUD + rerank -->
+  <text x="32" y="262" fill="#e6edf3" font-size="15" font-weight="600">MUD + rerank</text>
+  <rect x="200" y="242" width="4" height="30" rx="2" fill="#3fb950"/>
+  <text x="218" y="262" fill="#3fb950" font-size="15" font-weight="700">28 tokens</text>
+
+  <!-- big callout -->
+  <text x="32" y="332" fill="#3fb950" font-size="40" font-weight="800">99.7% menos tokens</text>
+  <text x="32" y="360" fill="#8b949e" font-size="14">mismo resultado — sin perder el dato que responde la pregunta</text>
+
+  <!-- stat chips -->
+  <g>
+    <rect x="32" y="386" width="240" height="60" rx="10" fill="#161b22" stroke="#30363d"/>
+    <text x="48" y="412" fill="#8b949e" font-size="12">PRECISIÓN DEL CONTEXTO</text>
+    <text x="48" y="435" fill="#e6edf3" font-size="18" font-weight="700">20% <tspan fill="#3fb950">→ 80%</tspan></text>
+
+    <rect x="290" y="386" width="240" height="60" rx="10" fill="#161b22" stroke="#30363d"/>
+    <text x="306" y="412" fill="#8b949e" font-size="12">CONTEXT HIT-RATE</text>
+    <text x="306" y="435" fill="#e6edf3" font-size="18" font-weight="700">100% <tspan fill="#8b949e" font-size="13" font-weight="400">(recall intacto)</tspan></text>
+
+    <rect x="548" y="386" width="240" height="60" rx="10" fill="#161b22" stroke="#30363d"/>
+    <text x="564" y="412" fill="#8b949e" font-size="12">REPRODUCIBLE</text>
+    <text x="564" y="435" fill="#e6edf3" font-size="16" font-weight="700" font-family="monospace">python bench.py</text>
+  </g>
+</svg>

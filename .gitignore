@@ -3,6 +3,9 @@
 mud_demo.db
 bench.db
 
+# Doc de difusión (trabajo interno, no va al repo público)
+PROMOCION.md
+
 # Python
 __pycache__/
 *.pyc
