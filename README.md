@@ -74,27 +74,30 @@ Endpoints: `POST /query` · `POST /write` · `POST /resolve` · `GET /audit` · 
 ## Benchmark: ¿ahorra atención de verdad?
 
 [`bench.py`](bench.py) siembra **150 bloques** de memoria y hace **12 preguntas**,
-cada una con un único bloque correcto. Compara dos estrategias sobre la misma memoria
-(solo stdlib, reproducible con semilla fija):
+cada una con un único bloque correcto (solo stdlib, reproducible con semilla fija).
 
-| Estrategia | Tokens de contexto | ¿Llega el dato correcto? |
+Mandarle **toda** la memoria al agente cuesta **8.722 tokens**. MUD consulta con
+presupuesto, y el **reranking por brecha de relevancia** afina qué llega al contexto:
+
+| Métrica | MUD sin rerank | MUD + rerank (`keep_ratio=0.5`) |
 |---|---|---|
-| **FLAT** — mandar toda la memoria al agente | **8.758** | sí, pero ahogado en ruido |
-| **MUD** — consulta con presupuesto | **199** (promedio) | **100%** de las veces |
+| Tokens de contexto (promedio) | 110 | **28** |
+| Ahorro vs. mandar todo | 98.7% | **99.7%** |
+| context_hit_rate | 100% | **100%** |
+| Precisión del contexto | 20% | **80%** |
 
-- 🟢 **Ahorro de tokens: 97.7%** por consulta.
+- 🟢 **Ahorro de tokens: 99.7%** por consulta.
 - 🟢 **context_hit_rate: 100%** — el bloque que responde la pregunta no se pierde.
-- 🟡 **Precisión del contexto: 13%** — con `top_k=5` el agente recibe el bloque correcto
-  **+ vecinos cercanos**. Subir esta precisión es justo lo que ataca el **reranking de la
-  Fase 3** del roadmap.
+- 🟢 **Precisión: 20% → 80%** al activar el reranking (Fase 3), **sin tocar el recall**.
 
-> El ahorro de atención y el recall ya están; la precisión es la próxima palanca, no un
-> número maquillado.
+> El reranking descarta los vecinos ruidosos que solo compartían una palabra con la
+> consulta y se queda con el bloque que de verdad responde. `keep_ratio` es la perilla
+> precisión/recall.
 
 Reproducilo:
 
 ```bash
-python bench.py        # tabla en consola
+python bench.py        # tabla comparativa en consola
 python bench.py --md   # además emite el Markdown de esta tabla
 ```
 
