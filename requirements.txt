@@ -1,0 +1,8 @@
+# El núcleo (mud.py), el demo, el benchmark y los tests corren SOLO con la
+# librería estándar de Python — no necesitás instalar nada.
+#
+# Estas dependencias son OPCIONALES: solo para levantar la API HTTP
+#   python mud.py serve
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2.0

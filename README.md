@@ -3,10 +3,11 @@
 > Una fuente de verdad que varios agentes de IA leen y escriben **sin pisarse**,
 > entregando a cada uno **solo la atención que necesita** — no toda la memoria.
 
+[![CI](https://github.com/ubihard-droid/gt-mud/actions/workflows/ci.yml/badge.svg)](https://github.com/ubihard-droid/gt-mud/actions/workflows/ci.yml)
 ![status](https://img.shields.io/badge/estado-draft%20evolutivo-blue)
 ![python](https://img.shields.io/badge/python-3.9%2B-3776AB)
 ![deps](https://img.shields.io/badge/demo-solo%20stdlib-success)
-![license](https://img.shields.io/badge/licencia-propietaria-lightgrey)
+![tests](https://img.shields.io/badge/tests-12%20passing-brightgreen)
 
 **Autor:** Gabriel Tabárez Atanasich — Director, División Informática
 **Marca:** SNI SOFT by Tirnel · [tech.sni.com.uy](https://tech.sni.com.uy)
@@ -70,6 +71,16 @@ python mud.py serve   # http://127.0.0.1:8077
 ```
 
 Endpoints: `POST /query` · `POST /write` · `POST /resolve` · `GET /audit` · `GET /health`
+
+## Calidad y tests
+
+12 tests (solo stdlib) cubren lo que hay que poder defender: hashing determinista,
+versionado, **concurrencia optimista** (detección de conflictos), presupuesto de
+tokens, reranking y auditoría. Corren en CI sobre Python 3.9 / 3.11 / 3.13.
+
+```bash
+python -m unittest -v
+```
 
 ## Benchmark: ¿ahorra atención de verdad?
 
