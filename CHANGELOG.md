@@ -15,6 +15,8 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es/).
 - **CI** con GitHub Actions: tests + demo + benchmark en Python 3.9 / 3.11 / 3.13.
 - Gráfico del benchmark en el README.
 - Sección 16.4 del spec documentando el reranking implementado.
+- **Licencia PolyForm Noncommercial 1.0.0**: gratis para uso no comercial, el uso
+  comercial requiere licencia paga (ver `LICENSE` y `COMERCIAL.md`).
 
 ### Corregido
 - `MUD.close()` libera el archivo SQLite: el demo fallaba al borrar la base en

@@ -8,6 +8,7 @@
 ![python](https://img.shields.io/badge/python-3.9%2B-3776AB)
 ![deps](https://img.shields.io/badge/demo-solo%20stdlib-success)
 ![tests](https://img.shields.io/badge/tests-12%20passing-brightgreen)
+[![licencia](https://img.shields.io/badge/licencia-PolyForm%20Noncommercial-orange)](LICENSE)
 
 **Autor:** Gabriel Tabárez Atanasich — Director, División Informática
 **Marca:** SNI SOFT by Tirnel · [tech.sni.com.uy](https://tech.sni.com.uy)
@@ -113,6 +114,19 @@ Reproducilo:
 python bench.py        # tabla comparativa en consola
 python bench.py --md   # además emite el Markdown de esta tabla
 ```
+
+## Licencia y uso comercial
+
+MUD está bajo la **[PolyForm Noncommercial License 1.0.0](LICENSE)**:
+
+- ✅ **Gratis** para uso no comercial: investigación, estudio, proyectos personales,
+  y organizaciones sin fines de lucro / educativas / gubernamentales.
+- 💼 **El uso comercial requiere una licencia paga.** Si querés usar MUD en un
+  producto, servicio o en producción con fines de lucro, escribinos:
+  ver **[COMERCIAL.md](COMERCIAL.md)** · [tech.sni.com.uy](https://tech.sni.com.uy)
+
+El código es **source-available**: podés verlo y probarlo libremente. Para llevarlo a
+un entorno comercial, se acuerda una licencia. No es open source permisivo.
 
 ## Manifiesto
 
