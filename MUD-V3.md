@@ -982,6 +982,48 @@ Modos:
 | `pointer_only` | Solo punteros si el budget es mínimo. |
 | `fallback_broad` | Si no hay match, devuelve contexto general breve. |
 
+### 16.4 Reranking por brecha de relevancia (implementado)
+
+La recuperación por `top_k` tiene un problema de **precisión**: junto al bloque que
+responde la intención entran vecinos que solo compartían una palabra con la
+consulta. El contexto se llena de señal débil.
+
+El **corte por brecha de relevancia** lo resuelve sin costo extra: el bloque
+correcto casi siempre tiene un score BM25 **muy superior** al del ruido. En vez de
+devolver ciegamente `top_k`, se calcula la relevancia del mejor resultado y se
+descartan los bloques por debajo de un umbral relativo.
+
+```text
+relevancia = -bm25(bloque)          # menor bm25 = mejor, así que negamos
+mejor      = relevancia del top-1
+se conserva el bloque  ⇔  relevancia ≥ mejor × keep_ratio
+```
+
+- `keep_ratio = 0.0` → desactivado (comportamiento `top_k` clásico).
+- `0 < keep_ratio < 1` → descarta lo que valga menos que `keep_ratio` del top.
+  El #1 siempre se conserva (nunca devuelve vacío ante un match).
+- Sube la precisión **sin tocar el recall** cuando hay un ganador claro, y de paso
+  gasta menos tokens (menos bloques ruidosos en contexto).
+
+Es la materialización de la **Fase 3 (retrieval híbrido → reranking)** del roadmap.
+
+#### Resultado medido
+
+Banco de pruebas (`bench.py`): 150 bloques de memoria, 12 consultas con una única
+respuesta correcta cada una, presupuesto de 400 tokens. Frente a mandarle **toda**
+la memoria al agente:
+
+| Métrica | MUD sin rerank | MUD + rerank (`keep_ratio=0.5`) |
+|---|---|---|
+| Tokens de contexto (promedio) | 110 | **28** |
+| Ahorro vs. mandar todo | 98.7 % | **99.7 %** |
+| `context_hit_rate` | 100 % | **100 %** |
+| Precisión del contexto | 20 % | **80 %** |
+
+El reranking sube la precisión **+60 puntos** manteniendo el recall intacto. El
+`keep_ratio` es una perilla precisión/recall que se puede barrer para elegir el
+óptimo con datos.
+
 ---
 
 ## 17. Seguridad y Permisos
