@@ -18,10 +18,10 @@ Solo librería estándar. Reproducible (semilla fija).
   python bench.py --md       # además emite el bloque Markdown para el README
 
 ---
-Autor:   Gabriel Tabárez Atanasich — Director, División Informática
+Autor:   SNI SOFT by Tirnel — División Informática
 Proyecto:MUD — Memoria Unificada Distribuida
 Marca:   SNI SOFT by Tirnel  ·  tech.sni.com.uy
-© 2026 Gabriel Tabárez Atanasich. Todos los derechos reservados.
+© 2026 SNI SOFT by Tirnel. Todos los derechos reservados.
 """
 
 import os

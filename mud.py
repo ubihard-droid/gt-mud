@@ -16,11 +16,11 @@ Uso:
   python mud.py serve           # levanta la API (requiere: pip install fastapi uvicorn)
 
 ---
-Autor:   Gabriel Tabárez Atanasich — Director, División Informática
+Autor:   SNI SOFT by Tirnel — División Informática
 Proyecto:MUD — Memoria Unificada Distribuida
 Marca:   SNI SOFT by Tirnel  ·  tech.sni.com.uy
 Método:  Algoritmo Loop Espiral GT
-© 2026 Gabriel Tabárez Atanasich. Todos los derechos reservados.
+© 2026 SNI SOFT by Tirnel. Todos los derechos reservados.
 """
 
 import sqlite3

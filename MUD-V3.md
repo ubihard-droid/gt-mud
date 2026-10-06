@@ -7,10 +7,10 @@
 **Estado:** Draft evolutivo  
 **Nombre:** MUD — Memoria Unificada Distribuida  
 **Enfoque:** Multiagente IA, contexto bajo demanda, estado verificable, memoria con ciclo de vida.  
-**Autor:** Gabriel Tabárez Atanasich — Director, División Informática  
+**Autor:** SNI SOFT by Tirnel — División Informática  
 **Marca:** SNI SOFT by Tirnel · tech.sni.com.uy  
 **Método:** Algoritmo Loop Espiral GT  
-**© 2026 Gabriel Tabárez Atanasich. Todos los derechos reservados.**
+**© 2026 SNI SOFT by Tirnel. Todos los derechos reservados.**
 
 ---
 

@@ -24,7 +24,7 @@ Si tu caso es comercial, **necesitás una licencia**. Es simple y estamos para c
 
 ## Cómo obtenerla
 
-**Titular / Licensor:** Gabriel Tabárez Atanasich — SNI SOFT by Tirnel
+**Titular / Licensor:** SNI SOFT by Tirnel
 **Contacto:** https://tech.sni.com.uy
 
 Escribinos con:
@@ -40,4 +40,4 @@ Te enviamos la propuesta de licencia y precio.
 > antes que asumir. La licencia no comercial y la comercial cubren casos distintos;
 > esta página es un resumen, el documento vinculante es [LICENSE](LICENSE).
 
-© 2026 Gabriel Tabárez Atanasich. Todos los derechos reservados.
+© 2026 SNI SOFT by Tirnel. Todos los derechos reservados.

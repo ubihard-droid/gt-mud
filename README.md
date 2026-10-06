@@ -10,7 +10,7 @@
 ![tests](https://img.shields.io/badge/tests-12%20passing-brightgreen)
 [![licencia](https://img.shields.io/badge/licencia-PolyForm%20Noncommercial-orange)](LICENSE)
 
-**Autor:** Gabriel Tabárez Atanasich — Director, División Informática
+**Autor:** SNI SOFT by Tirnel — División Informática
 **Marca:** SNI SOFT by Tirnel · [tech.sni.com.uy](https://tech.sni.com.uy)
 **Método:** Algoritmo Loop Espiral GT
 
@@ -141,4 +141,4 @@ un entorno comercial, se acuerda una licencia. No es open source permisivo.
 
 ---
 
-© 2026 Gabriel Tabárez Atanasich. Todos los derechos reservados.
+© 2026 SNI SOFT by Tirnel. Todos los derechos reservados.
